@@ -32,7 +32,7 @@ const Header = (props) => {
             <a className="nav-link disabled">Disabled</a>
            
           </li>
-          <li style={{marginTop:"8px"}}> <Cart state={props.state}/></li>
+          <li style={{marginTop:"8px"}}> <Cart cart={props.state}/></li>
         </ul>
         <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
