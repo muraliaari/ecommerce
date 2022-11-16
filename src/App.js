@@ -5,14 +5,22 @@ import Banner from './components/Banner';
 import Product from './components/Product';
 import ProductList from './components/ProductList';
 import Footer from './components/Footer';
+import {useState} from "react"
 
 function App() {
+
+  const [state,setState] = useState([])
+
+  const AddTocart=(title)=>{
+    console.log("calllleelelelle")
+    setState([...state,title])
+  }
+  
   return (
     <div className="App">
-      <Header/>
+      <Header state={state}/>
       <Banner/>
-      <ProductList/>
-      
+      <ProductList AddTocart={AddTocart}/>
       <Footer/>
     </div>
   );

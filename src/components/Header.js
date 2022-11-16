@@ -1,6 +1,7 @@
 import React from 'react'
+import Cart from './Cart'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div><nav className="navbar navbar-expand-lg bg-light">
     <div className="container-fluid">
@@ -29,7 +30,9 @@ const Header = () => {
           </li>
           <li className="nav-item">
             <a className="nav-link disabled">Disabled</a>
+           
           </li>
+          <li style={{marginTop:"8px"}}> <Cart state={props.state}/></li>
         </ul>
         <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
